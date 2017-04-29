@@ -1,8 +1,8 @@
 /**
- * Write a description of class SimpleScanner here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Get input easily with some basic input validation.
+ *
+ * @author Jon Cooper
+ * @version April 29, 2017
  */
 
 import java.util.Scanner;
@@ -11,21 +11,21 @@ public class SimpleScanner
 {
     Scanner input;
     boolean showExceptions;
-    
+
     public SimpleScanner() {
         this.input = new Scanner(System.in);
         this.showExceptions = false;
     }
-    
+
     public SimpleScanner(boolean showExceptions) {
         this.input = new Scanner(System.in);
         this.showExceptions = showExceptions;
     }
-    
+
     public String readString() {
         return input.nextLine();
     }
-    
+
     public int readInt() {
         while (true) {
             try {
@@ -36,11 +36,11 @@ public class SimpleScanner
                     e.printStackTrace();
                 }
             }
-            
+
             System.out.println("You must enter an integer. Try again.");
         }
     }
-    
+
     public int readInt(int min, int max) {
         while (true) {
             try {
@@ -54,11 +54,11 @@ public class SimpleScanner
                     e.printStackTrace();
                 }
             }
-            
+
             System.out.println("You must enter an integer in the range " + min + " to " + max + ". Try again.");
         }
     }
-    
+
     public double readDouble() {
         while (true) {
             try {
@@ -69,11 +69,11 @@ public class SimpleScanner
                     e.printStackTrace();
                 }
             }
-            
+
             System.out.println("You must enter a double. Try again.");
         }
     }
-    
+
     public double readDouble(double min, double max) {
         while (true) {
             try {
@@ -87,7 +87,7 @@ public class SimpleScanner
                     e.printStackTrace();
                 }
             }
-            
+
             System.out.println("You must enter a double in the range " + min + " to " + max + ". Try again.");
         }
     }
